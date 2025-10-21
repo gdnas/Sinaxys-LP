@@ -1,0 +1,165 @@
+/* =========================================================
+   SINAXYS DESIGN SYSTEM — Base CSS
+   Versão unificada para todas as landing pages
+   ========================================================= */
+
+/* 1. TOKENS DE MARCA ======================================= */
+:root {
+    --sx-brand: #542AEF;          /* Roxo Sinaxys */
+    --sx-brand-ink: #20105B;      /* Azul escuro */
+    --sx-ink: #0E1330;
+    --sx-muted: #6b7280;
+    --sx-line: #ECECF3;
+    --sx-surface: #FBFAFF;
+    --sx-surface-2: #F4F1FF;
+    --sx-surface-ink: #0b0d18;
+    --focus: rgba(153,153,255,.55);
+    --shadow-1: 0 6px 16px rgba(17,24,39,.06);
+    --shadow-2: 0 10px 28px rgba(17,24,39,.08);
+    --maxw: 1140px;
+  
+    --grad-hero: radial-gradient(1100px 380px at 50% -80px, rgba(84,42,239,.18), transparent 60%), linear-gradient(180deg, #fff 0%, #FBFAFF 70%);
+    --grad-band: linear-gradient(135deg, rgba(84,42,239,.10), rgba(32,16,91,.10));
+    --grad-tile: linear-gradient(135deg, #ffffff, #F7F6FF);
+    --ring: 0 0 0 1px var(--sx-line), 0 8px 24px rgba(20,26,56,.08);
+  }
+  
+  /* Tipografia */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&display=swap');
+  body {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  
+  /* 2. RESET E FUNDAMENTOS =================================== */
+  * { box-sizing: border-box; }
+  html:focus-within { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    color: var(--sx-ink);
+    background: #fff;
+    font-size: 15.8px;
+    line-height: 1.65;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  
+  /* 3. COMPONENTES GERAIS ==================================== */
+  
+  /* Botões padrão */
+  .sx-btn {
+    all: unset;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 48px;
+    padding: 0 18px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    font-weight: 800;
+    line-height: 1;
+    cursor: pointer;
+    transition: transform .18s, box-shadow .18s, background-color .18s, color .18s, border-color .18s;
+  }
+  .sx-btn:hover { transform: translateY(-1px); }
+  .sx-btn:focus-visible { outline: 0; box-shadow: 0 0 0 3px var(--focus); }
+  
+  .sx-btn--primary { background: var(--sx-brand); color: #fff; border-color: var(--sx-brand); }
+  .sx-btn--outline { background: #fff; color: var(--sx-brand); border-color: var(--sx-brand); }
+  .sx-btn--primary-gest { background: var(--sx-brand-ink); color: #fff; border-color: var(--sx-brand-ink); }
+  .sx-btn--outline-gest { background: #fff; color: var(--sx-brand-ink); border-color: var(--sx-brand-ink); }
+  .sx-btn--sm { min-height: 44px; padding: 0 14px; }
+  .sx-btn--full { width: 100%; }
+  
+  /* Container e seções */
+  .container { max-width: var(--maxw); margin: 0 auto; padding: 0 16px; }
+  @media (min-width: 860px) { .container { padding: 0 28px; } }
+  .section { padding: 72px 0; }
+  @media (max-width: 860px) { .section { padding: 56px 0; } }
+  
+  /* Cards */
+  .card {
+    background: #fff;
+    border: 1px solid var(--sx-line);
+    border-radius: 18px;
+    box-shadow: var(--shadow-2);
+    padding: 18px;
+  }
+  .card.center {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Headings e textos */
+  .headline {
+    margin: 0 0 10px;
+    letter-spacing: -.015em;
+    font-size: clamp(28px, 4.8vw, 42px);
+    line-height: 1.15;
+    text-align: center;
+  }
+  .subhead {
+    font-size: 16px;
+    color: var(--sx-muted);
+    margin: 0 auto 18px;
+    text-align: center;
+    max-width: 70ch;
+  }
+  
+  /* 4. LAYOUTS COMPARTILHADOS ================================ */
+  
+  /* Header (estrutura genérica para todas as LPs) */
+  .header-sx {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    border-bottom: 1px solid var(--sx-line);
+    transition: box-shadow .2s ease;
+  }
+  .header-sx.scrolled { box-shadow: 0 6px 18px rgba(17,24,39,.08); }
+  .header-sx__container {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-sx__brand img { height: 22px; }
+  
+  /* Footer */
+  .footer-sx {
+    color: #fff;
+    background: var(--sx-surface-ink);
+    padding: 64px 0 48px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
+  }
+  .footer-sx__container { max-width: var(--maxw); margin: 0 auto; padding: 0 16px; }
+  @media (min-width: 860px) { .footer-sx__container { padding: 0 28px; } }
+  
+  /* 5. UTILITÁRIOS E MOTION =================================== */
+  
+  /* Reveal */
+  .reveal {
+    transform: translateY(6px);
+    opacity: 0;
+    transition: .4s cubic-bezier(.22,1,.36,1);
+  }
+  .reveal.in { transform: none; opacity: 1; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .reveal.in { transform: none; opacity: 1; transition: none; }
+  }
+  
+  /* Placeholder shimmer */
+  @keyframes shimmer {
+    0% { background-position: -200px 0; }
+    100% { background-position: 200px 0; }
+  }
+  .logo-skel, .case-logo, .testi-avatar {
+    background: linear-gradient(90deg,#EEE 0%,#F7F6FF 40%,#EEE 80%);
+    animation: shimmer 1.4s infinite linear;
+  }
