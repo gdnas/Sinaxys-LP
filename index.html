@@ -1,37 +1,166 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sinaxys LP - Teste</title>
-  <link rel="stylesheet" href="./sinaxys-css.css">
-</head>
-<body>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
-  <header class="header-sx">
+  <!-- ===== SEO & Social ===== -->
+  <title>Recrutamento & Pagamentos para Saúde | Sinaxys</title>
+  <meta name="description" content="Para gestores e profissionais de saúde: publique vagas, contrate mais rápido e organize pagamentos com previsibilidade e conformidade — em um só lugar.">
+  <link rel="canonical" href="https://mkt.sinaxys.com/mkt-site-home">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sinaxys — Contrate rápido e pague sem ruído">
+  <meta property="og:description" content="Recrutamento, pagamentos e conformidade para saúde.">
+  <meta property="og:image" content="https://mkt.sinaxys.com/asset/16:mockup-busca-de-vagas-desk-e-mobilepng">
+  <meta property="og:url" content="https://mkt.sinaxys.com/mkt-site-home">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="theme-color" content="#542AEF" />
+  <link rel="icon" href="https://mkt.sinaxys.com/asset/8:iconesinaxys" />
+
+  <!-- Perf -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="https://mkt.sinaxys.com/asset/16:mockup-busca-de-vagas-desk-e-mobilepng" fetchpriority="high">
+  <link rel="preload" as="image" href="https://mkt.sinaxys.com/asset/6:logo-sinaxys-roxo-sem-fundopng">
+
+  <!-- ===== CSS Sinaxys Design System (externo) ===== -->
+  <link rel="stylesheet" href="https://gdnas.github.io/Sinaxys-LP/sinaxys-css.css" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Sinaxys","url":"https://sinaxys.com","logo":"https://mkt.sinaxys.com/asset/6:logo-sinaxys-roxo-sem-fundopng","sameAs":["https://www.instagram.com/sinaxys/","https://br.linkedin.com/company/sinaxys"]}
+  </script>
+
+  <!-- Mautic tracking -->
+  <script async src="https://mkt.sinaxys.com/mtc.js"></script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header-sx" role="banner">
     <div class="header-sx__container">
-      <div class="header-sx__brand">
+      <a href="https://mkt.sinaxys.com/mkt-site-home" class="header-sx__brand">
         <img src="https://mkt.sinaxys.com/asset/6:logo-sinaxys-roxo-sem-fundopng" alt="Sinaxys">
-      </div>
-      <button id="header-sx-hamb" aria-expanded="false">☰</button>
+      </a>
+      <nav class="header-sx__menu">
+        <div class="header-sx__dropdown" data-dd="gestor">
+          <button type="button" class="header-sx__menu-btn">Gestor</button>
+          <div class="header-sx__drop-panel">
+            <a class="header-sx__drop-item" href="https://mkt.sinaxys.com/mkt-site-gestor#free">Anuncie grátis</a>
+            <a class="header-sx__drop-item" href="https://mkt.sinaxys.com/mkt-site-gestor#advanced">Busque ativamente</a>
+            <a class="header-sx__drop-item" href="https://mkt.sinaxys.com/mkt-site-gestor#pagamentos">Organize pagamentos</a>
+            <a class="header-sx__drop-item" href="https://mkt.sinaxys.com/mkt-site-gestor#concierge">Pejotize sua clínica</a>
+          </div>
+        </div>
+
+        <div class="header-sx__dropdown" data-dd="prof">
+          <button type="button" class="header-sx__menu-btn">Profissional</button>
+          <div class="header-sx__drop-panel">
+            <a class="header-sx__drop-item" href="https://mkt.sinaxys.com/mkt-site-profissional#free">Buscar vagas</a>
+            <a class="header-sx__drop-item" href="https://mkt.sinaxys.com/mkt-site-profissional#contabilidade">Contabilidade especializada</a>
+            <a class="header-sx__drop-item" href="https://mkt.sinaxys.com/mkt-site-profissional#previsibilidade">Previsibilidade de recebíveis</a>
+            <a class="header-sx__drop-item" href="https://mkt.sinaxys.com/mkt-site-profissional#exterior">Trabalhe no exterior</a>
+          </div>
+        </div>
+
+        <a href="https://blog.sinaxys.com/" target="_blank" rel="noopener" class="header-sx__link">Blog</a>
+        <a href="https://sinaxys.com/institucional/" target="_blank" rel="noopener" class="header-sx__link">Quem somos</a>
+
+        <div class="header-sx__dropdown" data-dd="login">
+          <button type="button" class="header-sx__menu-btn">Login</button>
+          <div class="header-sx__drop-panel">
+            <a class="header-sx__drop-item" href="https://admin.sinaxys.com/login">Sou Gestor</a>
+            <a class="header-sx__drop-item" href="https://app.sinaxys.com/login?role=profissional">Sou Profissional</a>
+          </div>
+        </div>
+      </nav>
     </div>
   </header>
 
-  <main class="section container reveal">
-    <h1 class="headline">Sinaxys LP conectada com GitHub Pages</h1>
-    <p class="subhead">
-      Se você está vendo esta página estilizada e com o menu fixo reagindo ao scroll,
-      seu <strong>sinaxys-css.css</strong> e <strong>sinaxys-js.js</strong> estão funcionando corretamente.
-    </p>
-    <button class="sx-btn sx-btn--primary" id="btn-teste">Clique aqui</button>
+  <!-- HERO -->
+  <main>
+    <section class="hero section">
+      <div class="container">
+        <h1 class="headline">Contrate rápido. Receba no dia combinado.</h1>
+        <p class="subhead">Duas jornadas no mesmo lugar: recrutamento, pagamentos e conformidade — sem ruído para clínicas e profissionais.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+          <a class="sx-btn sx-btn--primary" href="https://app.sinaxys.com/vagas">Buscar vagas agora</a>
+          <a class="sx-btn sx-btn--outline-gest" href="https://mkt.sinaxys.com/mkt-site-gestor#free">Publicar vaga grátis</a>
+        </div>
+        <div class="kpis">
+          <div class="kpi"><b>+45 mil</b><span>candidaturas</span></div>
+          <div class="kpi"><b>+60 mil</b><span>acessos mensais</span></div>
+          <div class="kpi"><b>+32 mil</b><span>profissionais</span></div>
+        </div>
+      </div>
+      <div class="fullbleed">
+        <figure class="media-hero">
+          <img src="https://mkt.sinaxys.com/asset/16:mockup-busca-de-vagas-desk-e-mobilepng" alt="">
+        </figure>
+      </div>
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <section id="free" class="section">
+      <div class="container grid-2">
+        <article class="card reveal">
+          <span class="badge">Benefícios para</span>
+          <h2>Profissionais de saúde</h2>
+          <ul class="list">
+            <li>Candidate-se grátis às melhores vagas.</li>
+            <li>Filtre por especialidade e localização.</li>
+            <li>Previsibilidade de recebíveis com Sinaxys Pro (Beta).</li>
+            <li>Contabilidade simplificada com Sinaxys Contabilidade.</li>
+          </ul>
+          <a class="sx-btn sx-btn--primary sx-btn--sm" href="https://mkt.sinaxys.com/mkt-site-profissional">Criar perfil e buscar vagas</a>
+        </article>
+
+        <article class="card reveal">
+          <span class="badge">Benefícios para</span>
+          <h2>Clínicas e hospitais</h2>
+          <ul class="list">
+            <li>Publique vagas grátis e receba candidaturas.</li>
+            <li>Processo seletivo em um só lugar (Kanban).</li>
+            <li>Busca ativa + organização de pagamentos.</li>
+            <li>Pejotização e emissão automática de NF.</li>
+          </ul>
+          <a class="sx-btn sx-btn--outline sx-btn--sm" href="https://mkt.sinaxys.com/mkt-site-gestor#clinica-free">Ver soluções</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="section" style="background:linear-gradient(180deg,#fff 0%, #F7F6FF 100%)">
+      <div class="container">
+        <div class="card center reveal">
+          <h2>Faça parte você também!</h2>
+          <p class="subhead">Profissionais encontram oportunidades. Clínicas encontram talentos. Tudo em um só lugar.</p>
+          <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+            <a class="sx-btn sx-btn--primary" href="https://app.sinaxys.com/vagas">Buscar vagas</a>
+            <a class="sx-btn sx-btn--outline-gest" href="https://mkt.sinaxys.com/mkt-site-gestor#clinica-free">Publicar vaga grátis</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer-sx">
     <div class="footer-sx__container">
-      <p>© Sinaxys 2025 — Teste GitHub Pages</p>
+      <div class="footer-sx__contact">
+        <b class="footer-sx__brand">Sinaxys</b>
+        <span><a href="mailto:contato@sinaxys.com">contato@sinaxys.com</a></span>
+        <span><a href="https://wa.me/553131900211" target="_blank">+55 (31) 3190-0211</a></span>
+        <span><a href="https://br.linkedin.com/company/sinaxys">LinkedIn</a> • <a href="https://www.instagram.com/sinaxys/">Instagram</a></span>
+      </div>
+      <p class="footer-sx__copyright">© Sinaxys 2025 — Todos os direitos reservados</p>
     </div>
   </footer>
 
-  <script src="./sinaxys-js.js"></script>
+  <!-- ===== JS Sinaxys Design System ===== -->
+  <script defer src="https://gdnas.github.io/Sinaxys-LP/sinaxys-js.js"></script>
 </body>
 </html>
